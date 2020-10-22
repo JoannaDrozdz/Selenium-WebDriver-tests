@@ -53,13 +53,13 @@ public class Cookies {
         Cookie newCookie = new Cookie("test_cookie", "test_value", "amazon.com", "/",
                 new GregorianCalendar(2021, 10, 31).getTime(), true, true);
         driver.manage().addCookie(newCookie);
-        Assertions.assertEquals(9, driver.manage().getCookies().size(), "Number of cokkies is not what expected");
+        Assertions.assertEquals(9, driver.manage().getCookies().size(), "Number of cookies is not what expected");
         Cookie secondCookie = new Cookie("test_cookie2", "test_value2");
         driver.manage().addCookie(secondCookie);
 
-        Assertions.assertEquals(10, driver.manage().getCookies().size(), "Number of cokkies is not what expected");
+        Assertions.assertEquals(10, driver.manage().getCookies().size(), "Number of cookies is not what expected");
         driver.manage().deleteCookie(newCookie);
-        Assertions.assertEquals(9, driver.manage().getCookies().size(), "Number of cokkies is not what expected");
+        Assertions.assertEquals(9, driver.manage().getCookies().size(), "Number of cookies is not what expected");
     }
 
 }
